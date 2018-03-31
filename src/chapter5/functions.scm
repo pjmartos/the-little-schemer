@@ -126,4 +126,4 @@
   )
 )
 
-(provide rember* insertR* occur* subst* insertL* member* leftmost eqlist? rember)
+(provide rember* insertR* occur* subst* insertL* member* leftmost eqlist? equal? rember)

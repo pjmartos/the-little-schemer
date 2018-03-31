@@ -16,8 +16,8 @@
 
 ; value
 (check-equal? (value 13) 13)
-(check-equal? (value '(1 + 3)) 4)
-(check-equal? (value '(1 + (3 exp 4))) 82)
+(check-equal? (value '(+ 1 3)) 4)
+(check-equal? (value '(+ 1 (exp 3 4))) 82)
 ; value no está definido para atoms no numéricos
 ; (check-equal? (value 'cookie) null)
 

@@ -148,4 +148,4 @@
   )
 )
 
-(provide set? makeset subset? eqset? intersect? intersect union intersectall a-pair? fun? revrel fullfun? one-to-one?)
+(provide set? makeset subset? eqset? intersect? intersect union intersectall a-pair? first second build fun? revrel revpair fullfun? one-to-one?)

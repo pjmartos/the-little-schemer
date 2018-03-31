@@ -17,7 +17,7 @@
     (cond
       ((atom? nexp) nexp)
       ((eq? (operator nexp) '+) (o+ (value (1st-sub-exp nexp)) (value (2nd-sub-exp nexp))))
-      ((eq? (operator nexp) 'x) (x (value (1st-sub-exp nexp)) (value (2nd-sub-exp nexp))))
+      ((eq? (operator nexp) 'x) (ox (value (1st-sub-exp nexp)) (value (2nd-sub-exp nexp))))
       (else (exp (value (1st-sub-exp nexp)) (value (2nd-sub-exp nexp))))
     )
   )
@@ -25,7 +25,7 @@
 
 (define 1st-sub-exp
   (lambda (aexp)
-    (car aexp)
+    (car (cdr aexp))
   )
 )
 
@@ -37,7 +37,7 @@
 
 (define operator
   (lambda (aexp)
-    (car (cdr aexp))
+    (car aexp)
   )
 )
 

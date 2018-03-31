@@ -48,11 +48,11 @@
   )
 )
 
-(define x
+(define ox
   (lambda (n m)
     (cond
       ((zero? m) 0)
-      (else (+ n (x n (sub1 m))))
+      (else (+ n (ox n (sub1 m))))
     )
   )
 )
@@ -97,7 +97,7 @@
   (lambda (n m)
     (cond
       ((zero? m) 1)
-      (else (x n (exp n (sub1 m))))
+      (else (ox n (exp n (sub1 m))))
     )
   )
 )
@@ -185,4 +185,4 @@
   )
 )
 
-(provide add1 sub1 o+ o- tup? addtup x tup+ > < = exp quotient length pick rempick no-nums all-nums eqan? occur)
+(provide add1 sub1 o+ o- tup? addtup ox tup+ > < = exp quotient length pick rempick no-nums all-nums eqan? occur one?)
